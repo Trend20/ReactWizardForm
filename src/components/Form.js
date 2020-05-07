@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Email from './Email';
+import Username from './Username';
+import Password from './Password';
  
 class Form extends Component {
     constructor(props){
@@ -33,7 +36,25 @@ class Form extends Component {
     render() { 
         return (
             <div>
-                
+              <h3>React Wizard Form</h3>
+                <p>Step{this.state.currentForm}</p>
+                <form onSubmit={this.handleSubmit}>
+                    <Email 
+                        currentForm={this.state.currentForm}
+                        handleChange={this.handleChange}
+                        email={this.state.email}
+                    />
+                    <Username 
+                        currentForm={this.state.currentForm}
+                        handleChange={this.handleChange}
+                        username={this.state.username}
+                    />
+                    <Password 
+                        currentForm={this.state.currentForm}
+                        handleChange={this.handleChange}
+                        password={this.state.password}
+                    />
+                </form>
             </div>
         );
     }
