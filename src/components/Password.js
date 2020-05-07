@@ -1,6 +1,6 @@
 import React from 'react';
  
-const password = (props) => {
+const Password = (props) => {
     if(props.currentStep !== 3){
         return null
     }

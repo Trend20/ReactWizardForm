@@ -13,6 +13,20 @@ class Form extends Component {
             password: ''
         }
     }
+    _next = () =>{
+        let currentForm = this.state.currentForm;
+        currentForm = currentForm >= 2? 3: currentForm + 1;
+        this.setState({
+            currentForm: currentForm
+        });
+    }
+    _prev = () =>{
+        let currentForm = this.state.currentForm;
+        currentForm = currentForm <= 1? 1: currentForm - 1;
+        this.setState({
+            currentForm: currentForm
+        });
+    }
     // handleChange function
     handleChange = (event) =>{
         const { name, value } = event.target;
