@@ -98,6 +98,8 @@ class Form extends Component {
                         password={this.state.password}
                     />
                 </form>
+                {this.previousButton()}
+                {this.nextButton()}
             </div>
         );
     }

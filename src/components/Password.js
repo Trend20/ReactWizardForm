@@ -1,7 +1,7 @@
 import React from 'react';
  
 const Password = (props) => {
-    if(props.currentStep !== 3){
+    if(props.currentForm !== 3){
         return null
     }
     return (

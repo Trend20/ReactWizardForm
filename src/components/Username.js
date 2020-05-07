@@ -1,7 +1,7 @@
 import React from 'react';
  
 const Username = (props) => {
-    if(props.currentStep !== 2){
+    if(props.currentForm !== 2){
         return null
     }
     return (
