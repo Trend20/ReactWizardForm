@@ -1,7 +1,7 @@
 import React from 'react';
  
 const Email = (props) => {
-    if(props.currentStep !== 1){
+    if(props.currentForm !== 1){
         return null
     }
     return (
