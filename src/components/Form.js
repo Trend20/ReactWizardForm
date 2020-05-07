@@ -47,6 +47,35 @@ class Form extends Component {
               Username: ${username} \n
               Password: ${password}`) 
     }
+    // button functions
+    previousButton(){
+        let currentForm = this.state.currentForm;
+        if(currentForm !== 1){
+            return(
+                <button 
+                className=" btn btn-secondary"
+                type="button"
+                onClick={this._prev}>
+                    Previous
+                </button>
+            )
+        }
+        return null
+    }
+    nextButton(){
+        let currentForm = this.state.currentForm;
+        if(currentForm < 3){
+            return(
+                <button 
+                className=" btn btn-primary float-right"
+                type="button"
+                onClick={this._next}>
+                    Next
+                </button>
+            )
+        }
+        return null
+    }
     render() { 
         return (
             <div>
