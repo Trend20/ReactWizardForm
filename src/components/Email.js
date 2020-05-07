@@ -1,6 +1,9 @@
 import React from 'react';
  
-const Email = () => {
+const Email = (props) => {
+    if(props.currentStep !== 1){
+        return null
+    }
     return (
         <div className="form-group">
             <label for="email">Email Address</label>
@@ -10,8 +13,8 @@ const Email = () => {
             name="email"
             id="email"
             className="form-control"
-            value={PaymentResponse.email}
-            onChange={PaymentResponse.handleChange} />
+            value={props.email}
+            onChange={props.handleChange} />
         </div>
     );
 }
